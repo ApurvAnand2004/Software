@@ -1,4 +1,4 @@
-Step 1: Set Up Kubernetes Cluster
+## Step 1: Set Up Kubernetes Cluster
 ### 1.1 Install Prerequisites
 Ensure you have the following installed:
 
@@ -24,22 +24,22 @@ Expected Output: A running Kubernetes cluster with at least 1 master and 1+ work
 ## Step 2: Containerize the Web Application
 ### 2.1 Write the Dockerfile
 Create a Dockerfile to containerize your web app:
-# Use an official Node.js or Python base image
+#### Use an official Node.js or Python base image
 FROM node:16
 
-# Set working directory
+#### Set working directory
 WORKDIR /app
 
-# Copy application files
+#### Copy application files
 COPY . .
 
-# Install dependencies
+#### Install dependencies
 RUN npm install
 
-# Expose application port
+#### Expose application port
 EXPOSE 3000
 
-# Start the application
+#### Start the application
 CMD ["npm", "start"]
 
 ### 2.2 Build and Push the Docker Image
